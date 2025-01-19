@@ -49,7 +49,25 @@ submit.onclick = function(){
         category:category.value,
     }
     dataProduct.push(newProduct);
+    //save LocalStorage
     localStorage.setItem('product' , JSON.stringify(dataProduct)) // bach dekhel array f localstorage ==> thwel array l string
+
+    clearData()
+}
+
+
+
+//clear data
+
+function clearData(){
+    title.value = '';
+    price.value = '';
+    taxes.value = '';
+    ads.value = '';
+    discount.value = '';
+    total.innerHTML = '';
+    count.value = '';
+    category.value = '';
 }
 
 
@@ -64,14 +82,6 @@ submit.onclick = function(){
 
 
 
-
-
-
-
-
-
-//save LocalStorage
-//clear data
 //read
 //count
 //delete
