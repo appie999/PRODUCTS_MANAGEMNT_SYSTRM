@@ -94,6 +94,14 @@ function showData(){
         `
     }
     document.getElementById('tbody').innerHTML=table; 
+    let btnDelete = document.getElementById('deleteAll');
+    if(dataProduct.length>0){
+        btnDelete.innerHTML=`
+        <button onclick = deleteAll()>delete All </button>
+          `
+    }else{
+        btnDelete.innerHTML='';
+    }
 }
 
 showData()// bach tb9a khdama had function dima
@@ -111,8 +119,14 @@ function deleteData(i){
     showData()// to update the screen after delete
 }
 
+ 
+//delete All
 
-
+function deleteAll(){
+    localStorage.clear();
+    dataProduct.splice(0)
+    showData();
+}
 
 
 
