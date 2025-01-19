@@ -15,17 +15,17 @@
             </div>
 
             <div class="inputs">
-              <input type="text" id="text" placeholder="title"> 
+              <input type="text" id="title" placeholder="title"> 
               
               <div class="price">
-                <input type="number" id="price" placeholder="price">
-                <input type="number" id="taxes" placeholder="taxes">
-                <input type="number" id="ads" placeholder="ads">
-                <input type="number" id="discount" placeholder="discount">
-                <small id="total">111111</small>
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total"></small>
               </div>
               <input type="number" id="count" placeholder="count"> 
-              <input type="number" id="category" placeholder="category"> 
+              <input type="text" id="category" placeholder="category"> 
             
               <button id="submit">Create</button>
 
@@ -96,9 +96,8 @@
                 
                 </table>
             </div>
-
-
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
