@@ -89,7 +89,7 @@ function showData(){
             <td>${dataProduct[i].total}</td>
             <td>${dataProduct[i].category}</td>
             <td><button id="update">update</button></td>
-            <td><button id="delete">delete</button></td>
+            <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
         </tr>
         `
     }
@@ -100,8 +100,26 @@ showData()// bach tb9a khdama had function dima
 
 
 
-//count
+
 //delete
+
+function deleteData(i){
+
+    dataProduct.splice(i, 1);
+    localStorage.product = JSON.stringify(dataProduct);
+
+    showData()// to update the screen after delete
+}
+
+
+
+
+
+
+
+
+
+//count
 //update
 // search
 //clean data
