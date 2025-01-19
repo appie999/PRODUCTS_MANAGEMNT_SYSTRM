@@ -29,7 +29,12 @@ function getTotal(){
 
 //create product
 
-let dataProduct = [];
+let dataProduct;
+if(localStorage.product != null){
+    dataProduct = JSON.parse(localStorage.product)// tatred array kima kant y3ni mn string l array
+}else{
+    dataProduct = [];
+}
 
 
 submit.onclick = function(){
@@ -43,8 +48,8 @@ submit.onclick = function(){
         count:count.value,
         category:category.value,
     }
-    console.log(newProduct);
-    
+    dataProduct.push(newProduct);
+    localStorage.setItem('product' , JSON.stringify(dataProduct)) // bach dekhel array f localstorage ==> thwel array l string
 }
 
 
